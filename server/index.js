@@ -105,7 +105,7 @@ app.post('/api/problems/:id/rate', (req, res) => {
   // Calculate next review based on difficulty
   switch (difficulty) {
     case 1: // Rating 1
-      nextReview = new Date(now.getTime() + 5 * 1000); break; // 5 seconds
+      nextReview = new Date(now.getTime() + 15 * 60000); break; // 15 minutes
     case 2: // Rating 2
       nextReview = new Date(now.getTime() + 60 * 60000); break; // 1 hour
     case 3: // Rating 3

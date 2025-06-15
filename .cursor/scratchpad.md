@@ -162,4 +162,9 @@ The LeetCode Anki application now features a sophisticated, modern interface wit
 - **Repository cleanup**: Removed unnecessary files including start-app.bat, test files, reportWebVitals, logo.svg, default README
 - **Build optimization**: React build size reduced after removing unnecessary imports and files
 - **Fixed import errors**: Updated index.tsx to remove references to deleted reportWebVitals file
-- **Comprehensive README**: Created detailed documentation including all technologies, tools, setup instructions, and project structure 
+- **Comprehensive README**: Created detailed documentation including all technologies, tools, setup instructions, and project structure
+- **GitHub preparation**: Created .gitignore, initialized git repository, committed all essential files (23 files, excluding node_modules and build artifacts)
+- **Installation instructions**: Added complete setup guide for new users downloading from GitHub
+- **Server management issue**: Fixed problem where closing browser doesn't stop server, leading to "address already in use" errors
+- **Improved PowerShell script**: Added clear warnings about server management and better process detection
+- **Documentation update**: Added server shutdown instructions to README 

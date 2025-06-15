@@ -7,11 +7,11 @@ Spaced repetition app for practicing LeetCode problems
 
 ## 🚀 Installation & Setup
 
-### For New Users (First Time Setup)
+### New Users
 
 1. **Download the project**
    ```bash
-   git clone https://github.com/[YOUR-USERNAME]/lcanki.git
+   git clone https://github.com/ericezzhao/lcanki.git
    cd lcanki
    ```
 
@@ -40,20 +40,29 @@ Spaced repetition app for practicing LeetCode problems
 
 5. **Open your browser**
    - Go to: `http://localhost:3001`
-   - Enjoy your beautiful gradient LeetCode Anki app!
 
-## 🚀 Daily Usage (After Setup)
+## 🚀 Daily Usage
 
 1. **Double-click the launcher**
    - Open File Explorer
    - Navigate to the project folder
    - Double-click `start-app.ps1`
-   - ✅ **Done!** Browser opens automatically
 
 2. **Or run from PowerShell**
    ```powershell
    .\start-app.ps1
    ```
+
+### ⚠️ Important: How to Stop the Server
+
+**Closing the browser does NOT stop the server!** The Node.js server continues running in PowerShell.
+
+**Proper ways to stop:**
+- **PowerShell Script**: Press any key when prompted
+- **Manual**: Press `Ctrl + C` in the PowerShell window
+- **Force Stop**: `taskkill /F /IM node.exe`
+
+**Always stop the server before starting again** to avoid "address already in use" errors.
 
 ## 🎨 Features
 

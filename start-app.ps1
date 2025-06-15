@@ -19,12 +19,15 @@ try {
 }
 Write-Host ""
 
-Write-Host "Stopping any existing servers..." -ForegroundColor Yellow
-try {
+Write-Host "Checking for existing servers..." -ForegroundColor Yellow
+$nodeProcesses = Get-Process -Name "node" -ErrorAction SilentlyContinue
+if ($nodeProcesses) {
+    Write-Host "Found $($nodeProcesses.Count) existing Node.js server(s). Stopping them..." -ForegroundColor Yellow
     Stop-Process -Name "node" -Force -ErrorAction SilentlyContinue
+    Start-Sleep -Seconds 2
     Write-Host "Existing servers stopped." -ForegroundColor Green
-} catch {
-    Write-Host "No existing servers to stop." -ForegroundColor Green
+} else {
+    Write-Host "No existing servers found." -ForegroundColor Green
 }
 Write-Host ""
 
@@ -66,7 +69,12 @@ Write-Host " LeetCode Anki is now running!" -ForegroundColor Green
 Write-Host " Browser opened to: http://localhost:3001" -ForegroundColor Green
 Write-Host "============================================" -ForegroundColor Green
 Write-Host ""
-Write-Host "Press any key to stop the server..." -ForegroundColor Yellow
+Write-Host "IMPORTANT:" -ForegroundColor Red
+Write-Host "- Closing the browser does NOT stop the server" -ForegroundColor Yellow
+Write-Host "- The server will keep running in this window" -ForegroundColor Yellow
+Write-Host "- To stop the server, press ANY KEY here" -ForegroundColor Yellow
+Write-Host ""
+Write-Host "Press any key to stop the server..." -ForegroundColor Cyan
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 
 # Stop the server
