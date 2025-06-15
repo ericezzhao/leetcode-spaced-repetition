@@ -11,7 +11,7 @@ Spaced repetition app for practicing LeetCode problems
 
 1. **Download the project**
    ```bash
-   git clone https://github.com/[YOUR-USERNAME]/lcanki.git
+   git clone https://github.com/ericezzhao/lcanki.git
    cd lcanki
    ```
 
